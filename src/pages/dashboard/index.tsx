@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = (await api.get(`cards/search?q=${newRepo}+lang%3Apt&page=1`)).data
+      const response = (await api.get(`cards/search?q=${newRepo}+lang%3Apt`)).data
       setCards(response.data)
     } catch (err) {
       alert(err)
@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
       {inputError && <Error>{inputError}</Error>}
       <Cards>
         {cards.map((card, index) => (
-          <div className="col-6">
+          <div className="col-6" key={index}>
             <Link
               key={card.id}
               to={`/card/${card.id}`}

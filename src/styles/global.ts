@@ -13,11 +13,8 @@ export default createGlobalStyle`
 body {
   margin: 0;
   background: url(${mtgBackground});
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
+  background-color: black;
 }
 
 body, input, button {

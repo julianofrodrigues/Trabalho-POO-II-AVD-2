@@ -71,7 +71,7 @@ export const Cards = styled.div`
     transition: 0.2s;
 
     &:hover {
-      transform: translateX(10px);
+      transform: translateY(-20px);
     }
   }
 `;
